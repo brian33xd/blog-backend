@@ -1,12 +1,8 @@
 const mongoose = require("mongoose");
-const mongo_URI =
-  "mongodb+srv://BrianDB:brian1110011@brian33.sn9ep8h.mongodb.net/Blog";
 
 const connection = async () => {
   try {
-    await mongoose.connect(
-      "mongodb+srv://BrianDB:brian1110011@brian33.sn9ep8h.mongodb.net/Blog"
-    );
+    await mongoose.connect(process.env.MONGODB_CONNECT_URI);
 
     console.log("Correctly connected to database my blog");
   } catch (error) {
