@@ -4,11 +4,9 @@ const mongo_URI =
 
 const connection = async () => {
   try {
-    await mongoose.connect(mongo_URI, {
-      keepAlive: true,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(
+      "mongodb+srv://BrianDB:brian1110011@brian33.sn9ep8h.mongodb.net/Blog"
+    );
 
     console.log("Correctly connected to database my blog");
   } catch (error) {
